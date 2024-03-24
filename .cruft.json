@@ -1,0 +1,20 @@
+{
+  "template": "https://github.com/blackary/cookiecutter-streamlit-component/",
+  "commit": "c972054b7b0890a1aa1c02e792bedc71c525ea87",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author_name": "Alexander Rogiers",
+      "author_email": "alexander.rogiers@ugent.be",
+      "project_name": "Streamlit Link Button Extended",
+      "package_name": "streamlit-link-button-extended",
+      "import_name": "streamlit_link_button_extended",
+      "description": "Streamlit Component that allows the developer to track when it's been clicked",
+      "deployment_via_github_actions": "y",
+      "working_with_dataframes": "n",
+      "open_source_license": "MIT license",
+      "_template": "https://github.com/blackary/cookiecutter-streamlit-component/"
+    }
+  },
+  "directory": null
+}
