@@ -15,6 +15,8 @@ import streamlit as st
 
 from streamlit_link_button_extended import streamlit_link_button_extended
 
-value = streamlit_link_button_extended()
+label = "Google"
+url = "https://www.google.com"
 
-st.write(value)
+streamlit_link_button_extended(label, url, key="google_link_button")
+
