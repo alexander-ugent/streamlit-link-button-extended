@@ -36,13 +36,11 @@ function onRender(event) {
     button.addEventListener("click", function() {
       window.open(url, "_blank");
       
-      var timestamp = new Date().toISOString(); 
       // Add this line to send the event to Google Analytics
       // Replace 'event_name', 'event_category', and 'event_label' with your desired values
       gtag('event', 'link_button_click', {
-        'event_category': 'Link Button',
+        'event_category': 'De Kamer url',
         'event_label': label,
-        'event_timestamp': timestamp,
       });
     });
     
