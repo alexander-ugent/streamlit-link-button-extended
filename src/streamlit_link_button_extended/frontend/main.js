@@ -1,7 +1,14 @@
 function onRender(event) {
   if (!window.rendered) {
     const { label, url, disabled } = event.detail.args;
-
+    const { theme } = event.detail;
+    const isDarkMode = theme?.base === 'dark';
+    // Set styles based on the theme
+    const backgroundColor = isDarkMode ? 'rgb(14,17,23)' : 'white'; // Example colors for dark and light themes
+    const textColor = isDarkMode ? 'rgb(250, 250, 250)' : 'rgb(0, 0, 0)';
+    document.body.style.backgroundColor = backgroundColor;
+    document.body.style.color = textColor;
+  
     const rootElement = document.getElementById("root");
     rootElement.innerHTML = ''; // Clear any existing content
 
@@ -53,7 +60,7 @@ function onRender(event) {
   }
 
   // Always update the frame height in case of dynamic content changes
-  Streamlit.setFrameHeight(45);
+  Streamlit.setFrameHeight(55);
 }
 
 function setDefaultButtonStyles(button) {
