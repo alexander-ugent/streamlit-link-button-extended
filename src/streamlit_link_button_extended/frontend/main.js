@@ -29,11 +29,13 @@ function onRender(event) {
     button.addEventListener("click", function() {
       window.open(url, "_blank");
       
+      var timestamp = new Date().toISOString(); 
       // Add this line to send the event to Google Analytics
       // Replace 'event_name', 'event_category', and 'event_label' with your desired values
-      gtag('event', 'click', {
+      gtag('event', 'link_button_click', {
         'event_category': 'Link Button',
-        'event_label': label
+        'event_label': label,
+        'event_timestamp': timestamp,
       });
     });
     
@@ -51,7 +53,7 @@ function onRender(event) {
   }
 
   // Always update the frame height in case of dynamic content changes
-  Streamlit.setFrameHeight(85);
+  Streamlit.setFrameHeight(45);
 }
 
 function setDefaultButtonStyles(button) {
